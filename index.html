@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Pomo Timer</title>
+</head>
+
+<body>
+  <h1>My Pomo Timer</h1>
+      <form name="setPomo">
+      <select name="Pomo" id="Pomo-select">
+        <option value="">--Pomoの数--</option>
+        <option value="pomo1">1 ポモ</option>
+        <option value="pomo2">2 ポモ</option>
+        <option value="pomo3">3 ポモ</option>
+        <option value="pomo4">4 ポモ</option>
+      </select>
+      <select name="scale" id="scale-select">
+        <option value="">--1Pomoの大きさ--</option>
+        <option value="15m">15分</option>
+        <option value="25m">25分</option>
+        <option value="30m">30分</option>
+        <option value="45m">40分</option>
+        <option value="1h">1時間</option>
+        <option value="1.5h">1.5時間</option>
+      </select>
+    </form>
+  <input type="Button"
+         id="set_button"
+         value="ポモドーロの設定"
+         style="background-color:#ffffff;"
+         onmouseover="this.style.background='#ff6337';"
+         onmouseout="this.style.background='#ffffff';">
+<div id ="Timer">
+<font size = "7" >ここに時計が入る
+</div>
+  <input type="Button"
+         id="Pomo_start"
+         value="▶"
+         style="background-color:#ffffff;"
+         onmouseover="this.style.background='#B2D235';"
+         onmouseout="this.style.background='#ffffff';">
+
+  <script type = "text/javascript" src="src/main.js" charset="utf-8"></script>
+</body>
+
+</html>
