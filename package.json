@@ -21,5 +21,6 @@
   "homepage": "https://github.com/TAKA1210/MyPomoTimer#readme",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "devDependencies": {}
 }
