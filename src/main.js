@@ -1,10 +1,8 @@
 let SR = document.getElementById("Pomo_start");
 let SP = document.getElementById("Pomo_stop");
 
-//監視
-SP.addEventListener('click',stop());
 //動作部
-let pomo = 10;
+let pomo = 1500;
 let timer_ID;
 
 function start()
@@ -34,7 +32,12 @@ function Mypomo_start()
   timer.textContent = hour + ':' + minu + ':' + seco;
   if(pomo <= 0)
   {
-    stop();
+    nap_start();
   }
   pomo--;
+}
+
+function nap_start()
+{
+
 }
