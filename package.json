@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/TAKA1210/MyPomoTimer/issues"
   },
-  "homepage": "https://github.com/TAKA1210/MyPomoTimer#readme"
+  "homepage": "https://github.com/TAKA1210/MyPomoTimer#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
