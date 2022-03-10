@@ -7,17 +7,15 @@
 
 <body>
   <h1>My Pomo Timer</h1>
-<div id ="Timer">
+<div>
   <font size = "7" >
-  <p id="timer">ここに時計が入る </p>
+  <p id="timer">00:00:00 </p>
   </font>
 </div>
   <p>
-  <input type="Button"
-         id="Pomo_start"
-         value="START"
-         >
-</p>
+    <button id="Pomo_start" onClick = "start()">start</button>
+    <button id="Pomo_stop">stop</button>
+  </p>
   <script type = "text/javascript" src="src/main.js" charset="utf-8"></script>
 </body>
 
