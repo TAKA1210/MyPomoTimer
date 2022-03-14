@@ -32,9 +32,11 @@ function checked()
     PPbutton.checked = false;
     pomo = naptime;
     nap = true;
+    //UI
     audioPlay();
     document.getElementById('timer').style.backgroundColor = '#FFFF0F';
     displaytime(pomo);
+    alert('作業終了');
   }
 
   if(pomo <= 0 && PPbutton.checked == true && nap == true)
@@ -43,9 +45,11 @@ function checked()
     PPbutton.checked = false;
     pomo = pomotime;
     nap = false;
+    //UI
     audioPlay();
     document.getElementById('timer').style.backgroundColor = '#FFFFF0';
     displaytime(pomo);
+    alert('休憩終了');
   }
   console.log(nap);
 }
@@ -65,5 +69,8 @@ function displaytime(pomo)
 }
 function audioPlay()
 {
-
+  /*UI*/
+  audio = new Audio();
+  audio.src = 'media/tuuti.mp3';
+  audio.play();
 }
