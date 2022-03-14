@@ -1,4 +1,6 @@
-
+body{
+  font-family:'Helvetica';
+}
 .play_pause {
     display: inline-block;
     position: relative;
