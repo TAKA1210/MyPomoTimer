@@ -34,6 +34,7 @@ function checked()
     nap = true;
     audioPlay();
     document.getElementById('timer').style.backgroundColor = '#FFFF0F';
+    displaytime(pomo);
   }
 
   if(pomo <= 0 && PPbutton.checked == true && nap == true)
@@ -44,6 +45,7 @@ function checked()
     nap = false;
     audioPlay();
     document.getElementById('timer').style.backgroundColor = '#FFFFF0';
+    displaytime(pomo);
   }
   console.log(nap);
 }
