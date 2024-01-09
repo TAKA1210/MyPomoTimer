@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>My Pomo Timer</title>
-  <link rel="stylesheet" type="text/css" href="index.css">
-</head>
-<body>
-<div>
-  <font size = "7" >
-  <p id="timer">00:00:00 </p>
-  </font>
-</div>
-  <p>
-    <label class="play_pause">
-    <input type="checkbox" id = "check">
-    <span></span>
-</label>
-  </p>
-  <div class="test">
-  </div>
-  <script type = "text/javascript" src="src/main.js" charset="utf-8"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Pomo Timer</title>
+  </head>
+  <body>
+    <div>
+      <font size="7">
+        <p id="timer">00:00:00</p>
+      </font>
+    </div>
+    <p>
+      <div>
+        <label class="play_pause"> 
+        <input type="checkbox" id="check" />
+      </div>
+        <input type="button" id="skip" value="skip"/>
+        <div>
+          <font size="2">
+            <span
+              >集中時間 :
+              <input type="number" id="ptime" />
+            </span>
+            <span
+              >休憩時間 :
+              <input type="number" id="ntime" />
+            </span>
+            <input type="button" id="accept" value="設定">
+          </font>
+        </div>
+      </label>
+    </p>
+    <div class="test"></div>
+    <script type="text/javascript" src="src/src.js" charset="utf-8"></script>
+  </body>
 </html>
