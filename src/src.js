@@ -15,11 +15,12 @@ function startTimer(inputtime) {
 
     timeInterval = setInterval(() => {
         displaytime(Remainings);
-        if (Remainings <= 0) {
+        if (Remainings-- <= 0) {
+            alerting();
             isWorking = !isWorking;
             Remainings = settimer();
-            alert("終了");
-        } else Remainings--;
+            
+        }
     }, 1000);
     acceptButton.disabled = true;
 
@@ -31,6 +32,7 @@ function pauseTimer() {
 }
 
 function skipTimer() {
+    alerting();
     isWorking = !isWorking;
     Remainings = settimer();
     displaytime(Remainings);
@@ -56,6 +58,14 @@ function displaytime(sec) {
     timerDisplay.textContent = hour + ':' + minu + ':' + seco;
 }
 
+/*alerting */
+function alerting()
+{
+    if(isWorking)
+                alert("作業終了");
+            else
+                alert("休憩終了");
+}
 PauseCheckbox.addEventListener("change", () => {
     if (PauseCheckbox.checked) 
     {   
@@ -66,15 +76,12 @@ PauseCheckbox.addEventListener("change", () => {
     }
     else pauseTimer();
 });
-
-
 acceptButton.addEventListener("click", () => {
     let inputtime = settimer();
     Remainings = inputtime;
     displaytime(Remainings);
 
 });
-
 skipButton.addEventListener("click", () => {
     skipTimer();
 });
