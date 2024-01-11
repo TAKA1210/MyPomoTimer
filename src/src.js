@@ -5,9 +5,12 @@ let pomotimeInput = document.getElementById("ptime");
 let naptimeInput = document.getElementById("ntime");
 let acceptButton = document.getElementById("accept");
 
+/**初期設定 */
 let isWorking = true;
 let timeInterval;
-let Remainings;
+let Remainings = settimer();
+displaytime(Remainings);
+
 
 /*　時間を一秒ずつ減らしていき，特定の条件で作業時間と休憩時間を切り替える */
 function startTimer(inputtime) {
@@ -23,7 +26,6 @@ function startTimer(inputtime) {
         }
     }, 1000);
     acceptButton.disabled = true;
-
 }
 
 function pauseTimer() {
@@ -66,6 +68,7 @@ function alerting()
             else
                 alert("休憩終了");
 }
+/** チェックボックスを押したときに開始/停止を切り替える */
 PauseCheckbox.addEventListener("change", () => {
     if (PauseCheckbox.checked) 
     {   
@@ -76,12 +79,15 @@ PauseCheckbox.addEventListener("change", () => {
     }
     else pauseTimer();
 });
+
+/** 設定を押したときに時間を設定する． */
 acceptButton.addEventListener("click", () => {
-    let inputtime = settimer();
-    Remainings = inputtime;
+    Remainings = settimer();
     displaytime(Remainings);
 
 });
+
+/** skipを押したときにタイマーをスキップする */
 skipButton.addEventListener("click", () => {
     skipTimer();
 });
